@@ -10,10 +10,7 @@ import org.apache.spark.streaming.kafka010.KafkaUtils;
 import org.apache.spark.streaming.kafka010.LocationStrategies;
 import scala.Tuple2;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class KafkaConsumer {
     Map<String, Object> kafkaParams;
@@ -33,7 +30,7 @@ public class KafkaConsumer {
 
     }
 
-    public JavaPairDStream consumeStream(JavaStreamingContext javaStreamingContext){
+    public JavaPairDStream<String, List<String>> consumeStream(JavaStreamingContext javaStreamingContext){
         JavaInputDStream<ConsumerRecord<Long, String>> stream =
                 KafkaUtils.createDirectStream(
                         javaStreamingContext,
@@ -41,7 +38,7 @@ public class KafkaConsumer {
                         ConsumerStrategies.<Long, String>Subscribe(topics, kafkaParams)
                 );
 
-        JavaPairDStream pairedStream= stream.mapToPair(record -> new Tuple2<>(record.value(), record.value().split(" ")));
+        JavaPairDStream<String, List<String>> pairedStream= stream.mapToPair(record -> new Tuple2<>(record.value(), Arrays.asList(record.value().split(" "))));
         return pairedStream;
     }
 }

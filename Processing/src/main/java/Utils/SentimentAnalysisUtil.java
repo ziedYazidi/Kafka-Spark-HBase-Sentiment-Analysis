@@ -8,7 +8,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class SentimentAnalysisUtil {
     public static Set<String> loadFile(String pathToFile){
@@ -28,5 +30,18 @@ public class SentimentAnalysisUtil {
             return fileContent;
         }
     }
+
+     public static Integer computeScore(List<String> words, Set<String> positiveWords, Set<String> negativeWords){
+        return words.stream().map(word -> computeWordScore(word, positiveWords, negativeWords)).reduce(0, Integer::sum);
+     }
+
+     public static Integer computeWordScore(String word,Set<String> positiveWords, Set<String> negativeWords){
+        if(positiveWords.contains(word))
+            return 1;
+        else if(negativeWords.contains(word))
+            return -1;
+        else
+            return 0;
+     }
 }
 

@@ -6,20 +6,21 @@ import org.apache.spark.streaming.api.java.JavaDStream;
 import org.apache.spark.streaming.api.java.JavaPairDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 
+import java.util.List;
+
 public class SparkRunner {
     public static void main(String[] args) {
-        SparkConf conf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount");
+        SparkConf conf = new SparkConf().setMaster("local[4]").setAppName("NetworkWordCount");
         JavaStreamingContext jssc = new JavaStreamingContext(conf, Durations.seconds(1));
         KafkaConsumer kafkaConsumer = new KafkaConsumer();
-        JavaPairDStream stream = kafkaConsumer.consumeStream(jssc);
-        stream.print();
-
+        JavaPairDStream<String, List<String>> stream = kafkaConsumer.consumeStream(jssc);
+        SentimentAnalysis sentimentAnalysis = new SentimentAnalysis(jssc);
+        sentimentAnalysis.applySentimentAnalysis(stream).print();
         jssc.start();
         try {
             jssc.awaitTermination();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }
