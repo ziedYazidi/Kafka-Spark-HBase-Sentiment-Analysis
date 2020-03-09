@@ -33,7 +33,6 @@ public class SentimentAnalysis implements Serializable {
                 .filter(textScore -> textScore._2 != 0);
 
         JavaDStream<String> formattedResult = textScoreTuple.map(textScore -> textScore._1+ " => score: " + textScore._2);
-
         return formattedResult;
     }
 }
