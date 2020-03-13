@@ -17,12 +17,12 @@ public class SentimentAnalysis implements Serializable {
     private Broadcast<Set<String>> negativeWords;
 
     public SentimentAnalysis(JavaStreamingContext jssc) {
-        uselessWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/finaxys/KafkaSparkHBase/Processing/src/main/resources/stop-words.dat"));
-        positiveWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/finaxys/KafkaSparkHBase/Processing/src/main/resources/pos-words.dat"));
-        negativeWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/finaxys/KafkaSparkHBase/Processing/src/main/resources/neg-words.dat"));
+        uselessWords = (Broadcast<Set<String>>) jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/finaxys/KafkaSparkHBase/Processing/src/main/resources/stop-words.dat"));
+        positiveWords = (Broadcast<Set<String>>) jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/finaxys/KafkaSparkHBase/Processing/src/main/resources/pos-words.dat"));
+        negativeWords = (Broadcast<Set<String>>) jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/finaxys/KafkaSparkHBase/Processing/src/main/resources/neg-words.dat"));
     }
 
-    public JavaDStream<String> applySentimentAnalysis(JavaPairDStream<String, List<String>> stream){
+    public JavaPairDStream<String, Integer> applySentimentAnalysis(JavaPairDStream<String, List<String>> stream){
         JavaPairDStream<String, List<String>> textUsefullWordsPair = stream
                 .mapValues(wordsArray -> wordsArray.stream().map(elem -> elem.toLowerCase()))
                 .mapValues(lowerStream -> lowerStream.filter(elem -> elem.matches("[a-z]+")).filter(word -> !uselessWords.value().contains(word)))
@@ -33,6 +33,6 @@ public class SentimentAnalysis implements Serializable {
                 .filter(textScore -> textScore._2 != 0);
 
         JavaDStream<String> formattedResult = textScoreTuple.map(textScore -> textScore._1+ " => score: " + textScore._2);
-        return formattedResult;
+        return textScoreTuple;
     }
 }

@@ -14,7 +14,7 @@ The architecture consists of an ingestion and processing of a stream of Tweets c
 
  # Prerequisite
 
-* Install Java8
+* Install Java8: 
 * Install docker: you can use this script https://get.docker.com/
 
 # Steps
