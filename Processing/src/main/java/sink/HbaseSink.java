@@ -1,20 +1,34 @@
 package sink;
 
-import models.Record;
-import org.apache.spark.sql.SparkSession;
+import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.client.Put;
+import org.apache.hadoop.hbase.spark.JavaHBaseContext;
+import org.apache.hadoop.hbase.util.Bytes;
+import org.apache.spark.api.java.function.Function;
 import org.apache.spark.streaming.api.java.JavaDStream;
-
-import java.util.HashMap;
 
 public class HbaseSink {
 
-    public void saveToHbase(SparkSession sparkSession, JavaDStream<String> stream) {
-        StringBuilder catalog = new StringBuilder()
-                .append("{")
-                .append("\"table\":{\"namespace\":\"default\", \"name\":\"employee\"},\n")
-                .append("\"rowkey\":\"key\",")
-                .append("\"columns\":{")
-                .append("\"key\":{\"cf\":\"rowkey\", \"col\":\"key\", \"type\":\"string\"},")
-                .append("\"value\":{\"cf\":\"rowvalue\", \"col\":\"value\", \"type\":\"string\"},\n");
+    public static class PutFunction implements Function<String, Put> {
+
+        private static final long serialVersionUID = 1L;
+
+        public Put call(String v) throws Exception {
+            String[] cells = v.split(":");
+            Put put = new Put(Bytes.toBytes(cells[0]));
+            put.addColumn(Bytes.toBytes("content"), Bytes.toBytes(cells[1]),
+                    Bytes.toBytes(cells[2]));
+            put.addColumn(Bytes.toBytes("rating"), Bytes.toBytes(cells[3]),
+                    Bytes.toBytes(cells[4]));
+            return put;
+        }
     }
+
+    public static void saveToHbase(JavaHBaseContext javaHBaseContext, JavaDStream<String> resultSA) {
+        javaHBaseContext.streamBulkPut(resultSA,
+                TableName.valueOf("tweets"),
+                new PutFunction());
+    }
+
+
 }

@@ -22,41 +22,27 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>hortonworksId</id>
-            <name>hortonworks</name>
-            <url>https://repo.hortonworks.com/content/repositories/releases/</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10 -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming-kafka-0-10_2.12</artifactId>
+            <artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
             <version>2.4.5</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.12</artifactId>
-            <version>2.4.0</version>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.4.5</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming_2.12</artifactId>
-            <version>2.4.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.hortonworks.shc/shc-core -->
-        <dependency>
-            <groupId>com.hortonworks.shc</groupId>
-            <artifactId>shc-core</artifactId>
-            <version>1.1.0.3.1.5.6-1</version>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>2.4.5</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.hbase.connectors.spark/hbase-spark -->

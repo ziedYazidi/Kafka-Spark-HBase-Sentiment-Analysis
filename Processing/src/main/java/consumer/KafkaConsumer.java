@@ -38,6 +38,7 @@ public class KafkaConsumer {
                         ConsumerStrategies.<Long, String>Subscribe(topics, kafkaParams)
                 );
 
+
         JavaPairDStream<String, List<String>> pairedStream= stream.mapToPair(record -> new Tuple2<>(record.value(), Arrays.asList(record.value().split(" "))));
         return pairedStream;
     }
