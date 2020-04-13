@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3038839-d2eb-4267-ac0b-54a7049d99de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Processing/src/main/java/config/HBaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ingestion/Ingestion.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ingestion/src/main/java/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ingestion/src/main/java/config/KafkaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing/Processing.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Processing/src/main/java/config/HBaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/src/main/java/config/HBaseConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Processing/src/main/java/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/src/main/java/config/KafkaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing/src/main/java/consumer/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/src/main/java/consumer/KafkaConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Processing/src/main/java/jobs/SentimentAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/src/main/java/jobs/SentimentAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing/src/main/java/sink/HbaseSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/src/main/java/sink/HbaseSink.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Processing/target/" />
@@ -28,77 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/sink/HbaseSink.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/jobs/SentimentAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processing/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/config/HBaseConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ingestion/src/main/java/config/KafkaConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/config/KafkaConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/consumer/KafkaConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#1457#1471#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            <state relative-caret-position="414">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -106,17 +31,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Processing/src/main/java/models/Record.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/jobs/SentimentAnalysis.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/consumer/KafkaConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="225">
+              <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -145,11 +79,11 @@
         <option value="$PROJECT_DIR$/Processing/src/main/java/consumer/KafkaConsumer.java" />
         <option value="$PROJECT_DIR$/Processing/src/main/java/TestSparkHbase.java" />
         <option value="$PROJECT_DIR$/Processing/src/main/java/sink/HbaseSink.java" />
+        <option value="$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java" />
+        <option value="$PROJECT_DIR$/Processing/pom.xml" />
         <option value="$PROJECT_DIR$/Ingestion/src/main/java/config/KafkaConfig.java" />
         <option value="$PROJECT_DIR$/Processing/src/main/java/config/KafkaConfig.java" />
         <option value="$PROJECT_DIR$/Processing/src/main/java/config/HBaseConfig.java" />
-        <option value="$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java" />
-        <option value="$PROJECT_DIR$/Processing/pom.xml" />
         <option value="$PROJECT_DIR$/Processing/src/main/java/jobs/SentimentAnalysis.java" />
       </list>
     </option>
@@ -196,7 +130,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,45 +137,24 @@
               <item name="Kafka-Spark-HBase" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kafka-Spark-HBase-Sentiment-Analysis" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Kafka-Spark-HBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kafka-Spark-HBase-Sentiment-Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="Ingestion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kafka-Spark-HBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kafka-Spark-HBase-Sentiment-Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="Ingestion" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kafka-Spark-HBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kafka-Spark-HBase-Sentiment-Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="Processing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kafka-Spark-HBase" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kafka-Spark-HBase-Sentiment-Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="Processing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586558301146" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586782935409" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -256,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.reslove">
+  <component name="RunManager" selected="Application.SparkRunner">
     <configuration name="KafkaRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="KafkaRunner" />
       <module name="Ingestion" />
@@ -346,12 +258,23 @@
       <workItem from="1586355537613" duration="520000" />
       <workItem from="1586441883863" duration="13164000" />
       <workItem from="1586524458833" duration="7751000" />
-      <workItem from="1586548654106" duration="6054000" />
+      <workItem from="1586548654106" duration="6696000" />
+      <workItem from="1586719378146" duration="5882000" />
+      <workItem from="1586739417384" duration="1235000" />
+      <workItem from="1586782093810" duration="825000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Spark sink to Hbase">
+      <created>1586558391639</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586558391640</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91095000" />
+    <option name="totallyTimeSpent" value="99679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -365,7 +288,7 @@
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29482073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30996016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -374,7 +297,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32868218" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32868218" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -406,9 +329,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added Spark sink to Hbase" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Ingestion/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processing/src/main/java/Utils/SentimentAnalysisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -457,58 +377,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/TestSparkHbase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ingestion/src/main/java/config/KafkaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/consumer/KafkaConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#1457#1471#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/config/KafkaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/config/HBaseConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/models/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/TestSparkHbase.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -525,15 +394,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Processing/src/main/java/sink/HbaseSink.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+        <state relative-caret-position="128">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ingestion/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/config/KafkaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/config/HBaseConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ingestion/src/main/java/config/KafkaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/SparkRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/models/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processing/src/main/java/consumer/KafkaConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Processing/src/main/java/jobs/SentimentAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="414">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>

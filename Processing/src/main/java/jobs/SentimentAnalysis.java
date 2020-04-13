@@ -1,6 +1,7 @@
 package jobs;
 
 import Utils.SentimentAnalysisUtil;
+import org.apache.phoenix.util.PropertiesUtil;
 import org.apache.spark.broadcast.Broadcast;
 import org.apache.spark.streaming.api.java.JavaDStream;
 import org.apache.spark.streaming.api.java.JavaPairDStream;
@@ -15,11 +16,13 @@ public class SentimentAnalysis implements Serializable {
     private Broadcast<Set<String>> uselessWords;
     private Broadcast<Set<String>> positiveWords;
     private Broadcast<Set<String>> negativeWords;
+    private ClassLoader classLoader;
 
     public SentimentAnalysis(JavaStreamingContext jssc) {
-        uselessWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/zied/Desktop/Kafka-Spark-HBase-Sentiment-Analysis/Processing/src/main/resources/stop-words.dat"));
-        positiveWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/zied/Desktop/Kafka-Spark-HBase-Sentiment-Analysis/Processing/src/main/resources/pos-words.dat"));
-        negativeWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile("/home/zied/Desktop/Kafka-Spark-HBase-Sentiment-Analysis/Processing/src/main/resources/neg-words.dat"));
+        classLoader = PropertiesUtil.class.getClassLoader();
+        uselessWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile(classLoader.getResource("stop-words.dat").getPath()));
+        positiveWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile(classLoader.getResource("pos-words.dat").getPath()));
+        negativeWords = jssc.sparkContext().broadcast(SentimentAnalysisUtil.loadFile(classLoader.getResource("neg-words.dat").getPath()));
     }
 
     public JavaDStream<String> applySentimentAnalysis(JavaPairDStream<String, List<String>> stream){
